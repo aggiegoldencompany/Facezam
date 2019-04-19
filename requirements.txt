@@ -5,7 +5,7 @@ uvicorn==0.3.32
 python-multipart
 aiofiles
 aiohttp
-libglib2.0-0
+libglib
 opencv-python
 keras
 tensorflow
