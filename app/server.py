@@ -42,7 +42,10 @@ def index(request):
 async def analyze(request):
     data = await request.form()
     img_bytes = await (data['file'].read())
-    img = cv2.imread(data['file'])
+#    img = cv2.imread(data['file'])
+    img = open_image(BytesIO(img_bytes))
+    console.log(img.shape)
+    img = img.data
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     faces = face_cascade.detectMultiScale(gray, 1.3, 5)
