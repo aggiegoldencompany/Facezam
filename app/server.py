@@ -22,7 +22,7 @@ app.add_middleware(CORSMiddleware, allow_origins=['*'], allow_headers=['X-Reques
 app.mount('/static', StaticFiles(directory='app/static'))
 
 async def setup_learner():
-    face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+    face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
     model = model_from_json(open("facial_expression_model_structure.json", "r").read())
     model.load_weights('facial_expression_model_weights.h5')  # load weights
 
