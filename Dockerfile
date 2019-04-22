@@ -5,6 +5,12 @@ RUN apt-get update && apt-get install -y git python3-dev gcc \
 
 COPY requirements.txt .
 
+COPY facial_expression_model_structure.json .
+
+COPY facial_expression_model_weights.h5 .
+
+COPY haarcascade_frontalface_default.xml .
+
 RUN pip install --upgrade pip
 
 RUN pip install --no-cache-dir -r requirements.txt --upgrade
