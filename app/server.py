@@ -45,9 +45,9 @@ async def analyze(request):
     img = cv2.imread(data['file'])
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-   faces = face_cascade.detectMultiScale(gray, 1.3, 5)
-   print(faces) #locations of detected faces
-   count = 0
+    faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+    print(faces) #locations of detected faces
+    count = 0
 
     for (x, y, w, h) in faces:
         cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)  # draw rectangle to main image
