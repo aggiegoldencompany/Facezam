@@ -9,4 +9,4 @@ keras
 tensorflow
 matplotlib
 fastai
-opencv-docker
+anaconda

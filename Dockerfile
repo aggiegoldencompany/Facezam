@@ -9,6 +9,8 @@ RUN pip install --upgrade pip
 
 RUN pip install --no-cache-dir -r requirements.txt --upgrade
 
+RUN conda install -c conda-forge opencv
+
 COPY app app/
 
 RUN python app/server.py
