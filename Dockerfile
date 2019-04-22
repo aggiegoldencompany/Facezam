@@ -11,6 +11,12 @@ RUN pip install --no-cache-dir -r requirements.txt --upgrade
 
 COPY app app/
 
+COPY facial_expression_model_structure.json app/facial_expression_model_structure.json
+
+COPY facial_expression_model_weights.h5 app/facial_expression_model_weights.h5
+
+COPY haarcascade_frontalface_default.xml app/haarcascade_frontalface_default.xml
+
 RUN python app/server.py
 
 EXPOSE 5042
