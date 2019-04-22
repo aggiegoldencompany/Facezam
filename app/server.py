@@ -21,10 +21,10 @@ app = Starlette()
 app.add_middleware(CORSMiddleware, allow_origins=['*'], allow_headers=['X-Requested-With', 'Content-Type'])
 app.mount('/static', StaticFiles(directory='app/static'))
 
-#async def setup_learner():
-#    face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-#    model = model_from_json(open("facial_expression_model_structure.json", "r").read())
-#    model.load_weights('facial_expression_model_weights.h5')  # load weights
+async def setup_learner():
+    face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+    model = model_from_json(open("facial_expression_model_structure.json", "r").read())
+    model.load_weights('facial_expression_model_weights.h5')  # load weights
 
 
 
