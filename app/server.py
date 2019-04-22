@@ -12,6 +12,7 @@ from keras.models import model_from_json
 import sys
 
 classes = ['angry', 'disgust', 'fear', 'happy', 'sad', 'surprise', 'neutral']
+path = Path(__file__).parent
 
 app = Starlette()
 app.add_middleware(CORSMiddleware, allow_origins=['*'], allow_headers=['X-Requested-With', 'Content-Type'])
