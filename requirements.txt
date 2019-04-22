@@ -5,9 +5,8 @@ uvicorn==0.3.32
 python-multipart
 aiofiles
 aiohttp
-opencv-python
 keras
 tensorflow
 matplotlib
 fastai
-python-opencv
+opencv-docker
