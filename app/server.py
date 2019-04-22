@@ -11,6 +11,9 @@ import matplotlib.pyplot as plt
 from keras.models import model_from_json
 import sys
 
+from fastai import *
+from fastai.vision import *
+
 classes = ['angry', 'disgust', 'fear', 'happy', 'sad', 'surprise', 'neutral']
 path = Path(__file__).parent
 
