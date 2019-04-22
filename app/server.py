@@ -7,7 +7,7 @@ from io import BytesIO
 from keras.preprocessing import image
 import matplotlib
 import matplotlib.pyplot as plt
-#import cv2
+import cv2
 from keras.models import model_from_json
 import sys
 
