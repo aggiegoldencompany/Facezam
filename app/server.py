@@ -45,7 +45,7 @@ async def analyze(request):
 #    img = cv2.imread(data['file'])
     img = open_image(BytesIO(img_bytes))
     print(img.shape)
-    img = img.data
+    img = image2np(img)
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     faces = face_cascade.detectMultiScale(gray, 1.3, 5)
