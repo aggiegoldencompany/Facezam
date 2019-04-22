@@ -1,4 +1,4 @@
-FROM python:3.8.0a3-alpine3.9
+FROM python:3.7-alpine
 
 RUN apt-get update && apt-get install -y git python3-dev gcc \
     && rm -rf /var/lib/apt/lists/*
