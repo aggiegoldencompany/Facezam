@@ -10,3 +10,4 @@ tensorflow
 matplotlib
 fastai
 anaconda
+opencv-python

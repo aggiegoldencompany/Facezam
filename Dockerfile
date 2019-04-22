@@ -1,4 +1,4 @@
-FROM python:3.7-slim-stretch
+FROM python:3.8.0a3-alpine3.9
 
 RUN apt-get update && apt-get install -y git python3-dev gcc \
     && rm -rf /var/lib/apt/lists/*
@@ -9,7 +9,8 @@ RUN pip install --upgrade pip
 
 RUN pip install --no-cache-dir -r requirements.txt --upgrade
 
-RUN conda install -c conda-forge opencv
+RUN docker pull spmallick/opencv-docker:opencv
+
 
 COPY app app/
 
