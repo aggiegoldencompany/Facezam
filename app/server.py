@@ -44,7 +44,7 @@ async def analyze(request):
     img_bytes = await (data['file'].read())
 #    img = cv2.imread(data['file'])
     img = open_image(BytesIO(img_bytes))
-    console.log(img.shape)
+    print(img.shape)
     img = img.data
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
