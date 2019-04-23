@@ -41,7 +41,7 @@ def index(request):
 async def analyze(request):
     data = await request.form()
     img_bytes = await (data['file'].read())
-    img = open_image(BytesIO(img_bytes), , convert_mode='L', div=False)
+    img = open_image(BytesIO(img_bytes), convert_mode='L', div=False)
     img1 = image2np(img.data)
     img1.shape
     img1 = np.expand_dims(img1, axis = 2)
