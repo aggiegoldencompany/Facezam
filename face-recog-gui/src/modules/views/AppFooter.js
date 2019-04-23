@@ -45,7 +45,7 @@ function AppFooter(props) {
             <div position="fixed" className={classes.footer}>
                 <Toolbar className={classes.toolbar}>
                     <div className={classes.left} />
-                    <Button className={classes.rightLink} onClick={props.predict}>Predict Emotion</Button>
+                    <Button className={classes.rightLink} onClick={props.predict}>{props.text}</Button>
                     <div className={classes.right}/>
                 </Toolbar>
             </div>

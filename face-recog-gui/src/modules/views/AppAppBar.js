@@ -36,6 +36,34 @@ const styles = theme => ({
 function AppAppBar(props) {
     const { classes } = props;
 
+    let emotionTag = null;
+
+    switch (props.emotion) {
+        case 'angry':
+            emotionTag = <i className="em em-angry"></i>
+            break;
+        case 'disgust':
+            emotionTag = <i className="em em-nauseated_face"></i>
+            break;
+        case 'fear':
+            emotionTag = <i className="em em-fearful"></i>
+            break;
+        case 'happy':
+            emotionTag = <i className="em em-smile"></i>
+            break;
+        case 'sad':
+            emotionTag = <i className="em em-cry"></i>
+            break;
+        case 'surprise':
+            emotionTag = <i className="em em-astonished"></i>
+            break;
+        case 'neutral':
+            emotionTag = <i className="em em-no_mouth"></i>
+            break;
+        default:
+            emotionTag = <i className="em em-thinking_face"></i>
+    }
+
     return (
         <div>
             <AppBar position="fixed">
@@ -50,7 +78,7 @@ function AppAppBar(props) {
                         {'Emotion Recognition'}
                     </Link>
                     <div className={classes.right}>
-                        {/*<Button className={classes.rightLink} onClick={props.clear}>Clear Palette</Button>*/}
+                        {emotionTag}
                     </div>
                 </Toolbar>
             </AppBar>
