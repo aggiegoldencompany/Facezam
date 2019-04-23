@@ -50,6 +50,9 @@ async def analyze(request):
     model = model_from_json(open("facial_expression_model_structure.json", "r").read())
     model.load_weights('facial_expression_model_weights.h5')  # load weights
     gray = gray.astype(np.uint8)
+    face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+    model = model_from_json(open("facial_expression_model_structure.json", "r").read())
+    model.load_weights('facial_expression_model_weights.h5')  # load weights
     faces = face_cascade.detectMultiScale(gray, 1.3, 5)
     count = 0
     emotions = ('angry', 'disgust', 'fear', 'happy', 'sad', 'surprise', 'neutral')
