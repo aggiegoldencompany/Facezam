@@ -11,6 +11,7 @@ const styles = theme => ({
     //placeholder: toolbarStyles(theme).root,
     toolbar: {
         justifyContent: 'space-between',
+        backgroundColor: '#500000'
     },
     left: {
         flex: 1,
@@ -32,7 +33,7 @@ const styles = theme => ({
     },
     footer: {
         bottom: 0,
-        backgroundColor: theme.palette.primary.light
+        backgroundColor: '#8CB5CF'
     }
 });
 
